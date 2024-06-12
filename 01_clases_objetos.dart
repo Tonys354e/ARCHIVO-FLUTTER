@@ -1,19 +1,22 @@
+import 'dart:math';
 void main(){
-  DateTime fechaActual = DateTime.now();
-  print(fechaActual.year);
-  print(fechaActual.month);
-  print(fechaActual.day);
-  print(fechaActual.hour);
-  print(fechaActual.minute);
-  String fecha = "2020-07-20 20:12:23";
-  
-  DateTime fechaPasada = DateTime.parse(fecha);
-  print(fechaPasada);
-  DateTime dt1 = DateTime.parse("2020-07-20 20:12:23");
-  DateTime dt2 = DateTime.parse("2021-05-11 11:12:23");
+  print(e);
+  print(pi);
+  print(sqrt2);
+  print(sqrt(144));
 
-  Duration diferencia= dt2.difference(dt1);
-  print(diferencia.inDays);
-  print(diferencia.inHours);
-  print(diferencia.inMinutes);
+  print(sin(1));
+  print(cos(2));
+  print(tan(1));
+  
+  print(pow(2, 5));
+
+  print(max(4, 6));
+
+  print(min(5, 6));
+
+
+  print(Random().nextInt(18));  
+
+  print(min(4, 7));
 }
