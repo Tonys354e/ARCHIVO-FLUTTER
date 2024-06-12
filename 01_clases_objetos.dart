@@ -1,33 +1,28 @@
 void main (){
 
-Telefono miTelefono = Telefono("motorola","2223333444",true);
+Telefono miTelefono = Telefono(marca: "LG",numero: "813742863");
+Telefono telefono2 = Telefono.motorola(marca: "motorola");
+Telefono telefono3 = Telefono.prueba(numero: "183982173");
+
+
 print(miTelefono);
 print(miTelefono.marca);
 print(miTelefono.numero);
-print(miTelefono.cargaRapida);
-
-  miTelefono.marca = "LG";
-  print(miTelefono.marca);
-  miTelefono.llamar();
-
-  String numeroTelefono =miTelefono.obternerNumero();
-  print(numeroTelefono);
-
-
-Telefono lg = Telefono("LG","226348376",true);
-print(lg);
-print(lg.marca);
 
 }
   //atributos
 class Telefono{
-  String marca;
-  String numero;
-  bool cargaRapida;
+  String? marca;
+  String? numero;
+  bool? cargaRapida;
 
   //Constructor
 
-  Telefono(this.marca, this.numero,this.cargaRapida);
+  //Telefono(this.marca, this.numero);
+
+  Telefono({this.marca,this.numero});
+  Telefono.motorola({this.marca});
+  Telefono.prueba({this.numero});
   
   // metodo
 
