@@ -1,30 +1,20 @@
-void main(){
-  chofer pepe = chofer();
-
-  pepe.nombre = 'Jose Lopez';
-  pepe.calcularSalario();
-  pepe.manejar();
+void main() {
+   Perro milo = Perro(peso:20, nombrex: "Vinosolo", tipox: "Mamifero");
+   print(milo.nombre);
 }
-//Clase padre
-class Trabajador{
-  String? nombre;
-  double? salario;
-  void calcularSalario(){
-    print('calcular salario');
-  }
-}
-//Clase hijas
+//clase padre
+class Animal{
 
-class chofer extends Trabajador{
-  String? vehiculoAsignado;
-  void manejar(){
-    print("manejando..");
-  }
+String? nombre;
+String? tipo;
+
+Animal({this.nombre, this.tipo});
+
 }
 
-class Ayudante extends Trabajador{
-  String? area;
-  void gestionar(){
-    print("gestionando...");
-  }
+//clase hija
+
+class Perro extends Animal{
+  double? peso;
+  Perro({this.peso, nombrex, tipox}) : super(nombre: "Milo",tipo: "Mamifero");
 }
