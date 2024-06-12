@@ -1,37 +1,43 @@
-void main (){
+void main(){
 
-Telefono miTelefono = Telefono(marca: "LG",numero: "813742863");
-Telefono telefono2 = Telefono.motorola(marca: "motorola");
-Telefono telefono3 = Telefono.prueba(numero: "183982173");
-
-
-print(miTelefono);
-print(miTelefono.marca);
-print(miTelefono.numero);
+Telefono miTelefono = Telefono(marca: "Pepino", numero: "322", cargaRapida: true);
+miTelefono.miMarca = "LG";
+print(miTelefono.miMarca);
 
 }
-  //atributos
 class Telefono{
+  //Atributos
   String? marca;
   String? numero;
   bool? cargaRapida;
 
-  //Constructor
-
-  //Telefono(this.marca, this.numero);
-
-  Telefono({this.marca,this.numero});
-  Telefono.motorola({this.marca});
-  Telefono.prueba({this.numero});
-  
-  // metodo
-
-  void llamar (){
-    print("el telefono esta llamando.....");
-
+  //Getters - Setters
+  String get miMarca{
+    return marca ?? 'no hay datos';
   }
 
-  obternerNumero(){
+  set miMarca(String marcax){
+    marca = marcax;
+  }
+
+  String get miNumero{
+    return numero ?? 'no hay datos';
+  }
+
+  set miNumero(String numerox){
+    numero = numerox;
+  }
+  //Constructor
+
+  //Telefono(this.marca, this.numero, )
+  Telefono({this.marca, this.numero, this.cargaRapida});
+
+  //metodos
+  void llamar(){
+    print('El telefono esta llamando..');
+  }
+
+  obtenerNumero(){
     return numero;
   }
 }
