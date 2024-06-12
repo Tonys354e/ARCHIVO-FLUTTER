@@ -1,32 +1,25 @@
 void main(){
-  // forma form = forma();
-  Cuadrado cuadrado = Cuadrado();
-  cuadrado.calcular();
-  cuadrado.calcular2();
-
-}
-abstract class Forma{
-  double? area;
-  void calcular(){
-    print("calcular");
-
-  }
-  void calcular2();
+  Trabajador pepe = Trabajador();
+  pepe.obtenerNombre();
+  pepe.calcular();
 
 
 }
+abstract class Persona{
+  String? nombre;
+  void obtenerNombre();
+}
 
-class Cuadrado extends Forma{
-  double? base;
-  double? altura;
-
-  @override
+mixin Administrador{
+  String? area;
   void calcular(){
-    print("Calcular cuadrado");
+    print("Calculando Salario");
   }
+}
+
+class Trabajador extends Persona with Administrador{
   @override
-  void calcular2(){
-    print("Calcular 2");
-  
+  void obtenerNombre(){
+    print("El nombre del trabajador");
   }
 }
