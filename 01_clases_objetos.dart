@@ -1,43 +1,30 @@
 void main(){
+  chofer pepe = chofer();
 
-Telefono miTelefono = Telefono(marca: "Pepino", numero: "322", cargaRapida: true);
-miTelefono.miMarca = "LG";
-print(miTelefono.miMarca);
-
+  pepe.nombre = 'Jose Lopez';
+  pepe.calcularSalario();
+  pepe.manejar();
 }
-class Telefono{
-  //Atributos
-  String? marca;
-  String? numero;
-  bool? cargaRapida;
-
-  //Getters - Setters
-  String get miMarca{
-    return marca ?? 'no hay datos';
+//Clase padre
+class Trabajador{
+  String? nombre;
+  double? salario;
+  void calcularSalario(){
+    print('calcular salario');
   }
+}
+//Clase hijas
 
-  set miMarca(String marcax){
-    marca = marcax;
+class chofer extends Trabajador{
+  String? vehiculoAsignado;
+  void manejar(){
+    print("manejando..");
   }
+}
 
-  String get miNumero{
-    return numero ?? 'no hay datos';
-  }
-
-  set miNumero(String numerox){
-    numero = numerox;
-  }
-  //Constructor
-
-  //Telefono(this.marca, this.numero, )
-  Telefono({this.marca, this.numero, this.cargaRapida});
-
-  //metodos
-  void llamar(){
-    print('El telefono esta llamando..');
-  }
-
-  obtenerNumero(){
-    return numero;
+class Ayudante extends Trabajador{
+  String? area;
+  void gestionar(){
+    print("gestionando...");
   }
 }
